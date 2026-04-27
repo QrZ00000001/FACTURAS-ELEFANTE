@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Facturación - Mac OS Style</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="desktop-background">
+        <div class="window">
+            <div class="content">
+                <div class="sidebar">
+                    <div class="sidebar-header">
+                        <h2>Reportes</h2>
+                    </div>
+                    <div class="nav-item active" onclick="updateView('comparison')">
+                        <span class="icon">📊</span> Comparativa
+                    </div>
+                    <div class="nav-item" onclick="updateView('2023')">
+                        <span class="icon">📅</span> Año 2023
+                    </div>
+                    <div class="nav-item" onclick="updateView('2024')">
+                        <span class="icon">📅</span> Año 2024
+                    </div>
+                    <div class="nav-item" onclick="updateView('2025')">
+                        <span class="icon">📅</span> Año 2025
+                    </div>
+                    <div class="nav-item" onclick="updateView('2026')">
+                        <span class="icon">📅</span> Año 2026
+                    </div>
+                </div>
+                
+                <div class="main-view">
+                    <header>
+                        <h1 id="view-title">Comparativa 2025 vs 2026</h1>
+                        <p class="subtitle">Análisis mensual basado en el volumen de facturas</p>
+                    </header>
+                    
+                    <div class="chart-container">
+                        <canvas id="invoiceChart"></canvas>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="label">Total Histórico</span>
+                            <span class="value" id="total-hist">$231.259.983</span>
+                            <span class="trend pos">Deduplicado</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="label">Año más activo</span>
+                            <span class="value">2025</span>
+                            <span class="trend pos">$93.9M</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="label">Validación</span>
+                            <span class="value">Únicas</span>
+                            <span class="trend pos">Sin Duplicados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
